@@ -1,0 +1,37 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="HokeDVD.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link rel ="stylesheet" type ="text/css" href ="StyleSheet1.css"/>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <h1> Samantha’s Super DVD Store</h1>
+        <%--menu--%>
+        <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" 
+              EnableViewState="False" IncludeStyleBlock="False" 
+              StaticSubMenuIndent="16px">
+              <Items>
+                 <asp:MenuItem NavigateUrl="~/Home.aspx" Text="Home"/>
+                 <asp:MenuItem NavigateUrl="~/Admin/AddDVD.aspx" Text="Add DVD"/>
+                 <asp:MenuItem NavigateUrl="~/Admin/EditDVD.aspx" Text="Edit DVD"/>
+                 <asp:MenuItem NavigateUrl="~/Admin/Reports.aspx" Text="Reports"/>
+              </Items>
+        </asp:Menu>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        <p> Copyright 2014 Samantha Hoke Enterprises</p>
+
+    </div>
+    </form>
+</body>
+</html>
